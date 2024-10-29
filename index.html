@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff; /* Light background color */
+            margin: 0;
+            padding: 0;
+            width:100%;
+            height:100%;
+        }
+
+        .logo {
+            width: 50px; /* Set width for the logo */
+            height: 50px; /* Set height for the logo */
+            border-radius: 50%; /* Make it circular */
+            margin-right: 15px; /* Space between logo and text */
+        }
+
+        .navbar {
+            height:100px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .navbar-brand {
+            font-family: 'Josefin Sans';
+            font-weight: 700;
+            color: #001832; /* Brand color */
+            font-size: 2.3em; /* Increased by 30% from default */
+            margin-right: 650px;
+            margin-left: 80px; /* Space between brand and navbar items */
+        }
+
+        .nav-link {
+            font-weight: 400;
+            color: #495057; /* Link color */
+            transition: color 0.3s;
+            font-size: 1.15em; /* Increased by 15% for the Home link */
+        }
+
+        .nav-link:hover {
+            color: #00b120; /* Hover color */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .nav-item.active .nav-link {
+            font-weight: 700; /* Bold active link */
+            color: #013606; /* Active link color */
+            font-size:25px;
+            font-family: 'Roboto';
+        }
+
+        .container {
+            padding: 25px;
+            background-color: #f0f2f2;
+        }
+
+        .navbar-nav {
+            margin-left: 10px; /* Push nav items to the right */
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            height: 100%;
+        }
+
+        .banner {
+            background-image: url('top_image.png'); /* Replace with your image path */
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .banner-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-content h1 {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .banner-content p {
+            font-size: 2.4em;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        .container1 {
+            width: 100%;
+            height:800px;
+            padding: 30px;
+            background-color: #f7f7f7;
+            padding-bottom: 30px;
+            align-content:center;
+            animation: fadeIn 1.5s ease-in-out;
+            
+        }
+
+        .intro-text {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #5ad15e;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .h22 {
+            color: #333;
+            margin: 5px 0 0;
+            font-size: 38px;
+            line-height: 1.2;
+            font-family:'Merriweather';
+        }
+
+        .cards {
+            display: flex;
+            gap: 40px;
+            margin-top: 25px;
+            margin-left: 10%;
+            margin-right: 10%;
+            align-items:center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-title {
+            color: #4CAF50;
+        }
+
+        .card-description {
+            font-size: 24px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+            }
+        }
+
+        .container2 {
+            display: flex;
+            max-width: 100%;
+            height:700px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .text-section {
+            padding: 40px;
+            flex: 1;
+            align-self:center;
+        }
+        .text_one_the_left {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .text-section_one_the_rigth {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+            color:black;
+        }
+        .text-section_p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .text-section_a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #27ae60;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .image-section23 {
+            margin-right:40px;
+            max-width:500px;
+            flex: 1;
+            background: url('TEXT_2_ONE.png') center center / cover no-repeat;
+            height: 90%;
+            align-self:center;
+        }
+        .container222 {
+            display: flex;
+            max-width: 100%;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .form-container {
+            
+            width: 60%;
+            padding-right: 20px;
+        }
+        .video-container {
+            margin-right: 100px;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .h1_aaaa {
+            color: #2ecc71;
+            
+            margin-left: 100px;
+            font-size: 16px;
+            align-self:center;
+        }
+        .h2_bbbbb {
+            font-family:'Roboto Slab';
+            margin-left:100px;
+            font-size: 29px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            align-self:center;
+            color: #010d0d;
+        }
+        .labelaa {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #010d0d;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .r22_for_the_text_box_of_form {
+            max-width:55%;
+            max-height:auto;
+            align-items: center;
+        }
+        .submit-btn {
+            background-color: #029d43;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            max-width:25%;
+        }
+        .submit-btn:hover {
+            background-color: #27ae60;
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9 / 12;
+            max-height: 400px; /* Optional: limit height for consistency */
+            border-radius: 8px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .class_of_form{
+            margin-left:100px;
+        }
+        footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+
+    border-radius: 50%;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+  float: right;
+
+}
+.footer-menu ul{
+  display: flex;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+.footer-menu ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover{
+  color: #27bcda;
+}
+
+@media (max-width:500px) {
+.footer-menu ul{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+}
+.fadeIn {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slideUp {
+            animation: slideUp 1.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5em;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity 0.5s ease, visibility 0.5s ease; /* Added visibility transition */
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden; /* Added visibility change */
+        }
+
+
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- <div id="preloader"></div> -->
+    <nav class="navbar navbar-expand-lg bg-body-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Startup.png" alt="Logo" class="logo"> <!-- Placeholder logo -->
+                Startup Web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#about-section">About</a>
+                    </li><em></em>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#service-section">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#contact-section">Contact Now</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+      
+    <div class="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Empower your startup</h1><br>
+            <p>Build a stunning website today!</p><br>
+            <a href="#service-section" class="button">VIEW SERVICES</a>
+        </div>
+    </div>
+
+    <div class="container2" id="about-section">
+        <div class="text-section">
+            <h29 class="text_one_the_left">EMPOWERING STARTUPS</h29><br>
+            <h19 class="text-section_one_the_rigth">Your vision, our expertise</h19>
+            <p class="text-section_p">At Startup Web, we specialize in crafting stunning websites tailored for startups. Our dedicated team understands the unique challenges faced by new businesses and is committed to transforming your ideas into a powerful online presence. We combine creativity with cutting-edge technology to ensure your startup stands out in a competitive market. Partner with us and let's build something amazing together!</p>
+            <a  class="text-section_a"  href="#">Get in touch</a>
+        </div>
+        <div class="image-section23"></div>
+    </div>
+
+
+    <div class="container1" id="service-section"><br><br>
+        <div class="highlight">Launch your vision</div><br>
+        <h22 class="h22">Crafting websites for ambitious startups</h22><br><br><br>
+        <div class="cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="Website_design.png" alt="Website design">
+                <div class="card-content">
+                    <div class="card-title">Website design ></div>
+                    <p class="card-description">Create visually appealing and user-friendly websites for startups.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="ecommers.png" alt="E-commerce solutions">
+                <div class="card-content">
+                    <div class="card-title">E-commerce solutions ></div>
+                    <p class="card-description">Build robust e-commerce platforms to boost your online sales.</p><br>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="search _engine.png" alt="Search engine optimization">
+                <div class="card-content"><br>
+                    <div class="card-title">Search engine optimization ></div>
+                    <p class="card-description">Enhance your website's visibility on search engines effectively.</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container222" id="contact-section">
+        <!-- Form Section -->
+        <div class="form-container"><br><br>
+            <h1 class="h1_aaaa">GET IN TOUCH</h1>
+            <h2 class="h2_bbbbb">We're here to help your startup!</h2>
+            <form action="#" method="post"  class="class_of_form">
+                <label  class="labelaa"  for="name">Name *</label>
+                <input class="r22_for_the_text_box_of_form"    type="text" id="name" name="name" required placeholder="Jane Smith">
+                
+                <label class="labelaa"  for="email">Email address *</label>
+                <input class="r22_for_the_text_box_of_form" type="email" id="email" name="email" required placeholder="email@website.com"><br>
+                
+                <label class="labelaa"  for="phone">Phone number *</label>
+                <input class="r22_for_the_text_box_of_form" type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX"><br>
+                
+                <label class="labelaa"  for="message">Message *</label>
+                <textarea class="r22_for_the_text_box_of_form" id="message" name="message" rows="4" required placeholder="Your message here..."></textarea><br>
+                
+                <a href="#Co"><button  class="submit-btn">Submit</button></a>
+            </form>
+        </div>
+        
+        <!-- Video Section -->
+        <div class="video-container">
+            <video controls>
+                <source src="video-sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content" id="Co">
+            <h3>Startup Web</h3>
+            <p>At Startup Web, we create impactful websites for startups. Our expert team understands the unique needs of new businesses and brings your ideas to life with creativity and technology. Let's make your startup stand out!</p>
+            <p>To order contact on +91 9116643536 or email us at- startupweb.creations@gmail.com</p>
+            <p>All right reserve &copy; Startup Web</p>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <p>copyright &copy; Startup Web</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="#about-section">About</a></li>
+                        <li><a href="#contact-section">Contact</a></li>
+                        <li><a href="#service-section">Service</a></li>
+                      </ul>
+                    </div>
+        </div>
+
+    </footer>
+    <!-- <script>
+        // Function to create typing effect
+        function typeText(element, text, delay, callback) {
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, delay);
+                } else {
+                    callback(); // Call the callback when typing is complete
+                }
+            }
+            type();
+        }
+
+        // Wait for the page to load
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const body = document.body;
+            const textToType = "Startup Web";
+
+            // Start typing effect
+            typeText(preloader, "Welcome to Startup Web", 250, () => {
+                // Automatically hide the preloader after 10 seconds
+                setTimeout(() => {
+                    preloader.classList.add("hidden"); // Fade out preloader
+
+                    // Remove preloader from DOM after fade-out
+                    setTimeout(() => {
+                        preloader.style.display = "none"; // Hide preloader from view
+                        body.style.display = "block"; // Show the body content
+                    }, 500); // Match timeout with CSS transition duration
+                }, 2000); // 10 seconds before hiding the preloader
+            });
+        });
+    </script> -->
+</body>
+
+</html>
